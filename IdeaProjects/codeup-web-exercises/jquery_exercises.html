@@ -46,14 +46,35 @@
         <li>fifty seven</li>
     </ul>
 </div>
-
+<div>
+    <input type="button" class="btn" id="newPage"/>
+</div>
 <script>
     $(document).ready(function(){
         // All the magic happens in here
-        $('.codeup').css('font-size', '20px');
-        $('h1, p, li').css('background-color', 'yellow');
+        $('#myHeader').click(function() {
+            $(this).css('background-color', 'red');
+        });
     });
 
+
+    $('li').hover(
+        function() {
+            $(this).css('background-color', 'red');
+        },
+        function() {
+            $(this).css('background-color', '#FFF');
+        }
+    );
+
+    $('p').dblclick(function(e) {
+        $(this).css('font-size', '18px');
+    });
+
+    $('button').click(function() {
+        $(this).button('newPage'));
+        }
+    )
 </script>
 
 </body>
