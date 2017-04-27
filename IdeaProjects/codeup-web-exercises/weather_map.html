@@ -19,7 +19,19 @@
 <h2 id="city"></h2>
 <section class="Container" id="weather">
 </section>
-
+<div class="Container">
+    <form>
+        <label hidden for="latitude">Latitude:</label>
+        <input hidden type="number" id="latitude" name="latitude">
+        <label hidden for="longitude">Longitude:</label>
+        <input hidden type="number" id="longitude" name="longitude">
+        <label hidden for="days">Days</label>
+        <select id="days" name="days" hidden>
+            <option selected>3</option>
+        </select>
+        <button hidden id="button" type="button">Update Forecast</button>
+    </form>
+</div>
 <div class="Container">
     <div id="map"></div>
 </div>
