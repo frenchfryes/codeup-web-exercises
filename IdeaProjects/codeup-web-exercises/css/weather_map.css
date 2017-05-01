@@ -27,3 +27,12 @@ body {
     text-align: center;
     clear: both;
 }
+
+label {
+    color: white;
+}
+
+#button {
+background-color: deepskyblue;
+    color: white;
+}

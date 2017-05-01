@@ -25,11 +25,16 @@
         <input hidden type="number" id="latitude" name="latitude">
         <label hidden for="longitude">Longitude:</label>
         <input hidden type="number" id="longitude" name="longitude">
-        <label hidden for="days">Days</label>
-        <select id="days" name="days" hidden>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <label for="days">Days</label>
+        <select id="days" name="days">
             <option selected>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>10</option>
         </select>
-        <button hidden id="button" type="button">Update Forecast</button>
+        <button id="button" type="button">Update Forecast</button>
     </form>
 </div>
 <div class="Container">
@@ -123,6 +128,24 @@
         $('#weather').html(weatherHtml);
         $('#city').html(cityHtml);
     };
+
+  /*  function initService() {
+        var displaySuggestions = function(predictions, status) {
+            if (status != google.maps.places.PlacesServiceStatus.OK) {
+                alert(status);
+                return;
+            }
+
+            predictions.forEach(function(prediction) {
+                var li = document.createElement('li');
+                li.appendChild(document.createTextNode(prediction.description));
+                document.getElementById('results').appendChild(li);
+            });
+        };
+
+        var service = new google.maps.places.AutocompleteService();
+        service.getQueryPredictions({ input: 'pizza near Syd' }, displaySuggestions);
+    }*/
 </script>
 </body>
 </html>
